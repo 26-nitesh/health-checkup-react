@@ -6,7 +6,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2),
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(8),
+    backgroundColor: '#f2f2f2'
   },
   paper: {
     padding: theme.spacing(2),
@@ -27,7 +28,7 @@ export default function Home() {
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
             <Typography variant="h4" gutterBottom>
-              Welcome to My App
+              Welcome to All in one solution
             </Typography>
             <Typography variant="body1" gutterBottom>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -51,7 +52,7 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
-            <img src="https://source.unsplash.com/random/800x600" alt="random" className={classes.image} />
+            <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80" alt="random" className={classes.image} />
           </Paper>
         </Grid>
       </Grid>
