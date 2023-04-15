@@ -40,28 +40,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Login(props) {
+export default function Register(props) {
   const classes = useStyles();
-  const [openDialogRegister, setRegisterDialog] = useState(false);
 
 
-  const handleOpenRegisterDialog = () => {
-    // setRegisterDialog(true);
-    props.loginPopUp(false)
-  };
 
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h5" component="h2" className={classes.title}>
-            Log In
+            Sign Up
           </Typography>
           <form className={classes.form}>
+          <TextField label="Name" type="text" required />
             <TextField label="Email" type="email" required />
             <TextField label="Password" type="password" required />
             <TextField
-              label="Login As"
+              label="register As"
               select
               value="v"
               variant="standard"
@@ -69,15 +65,14 @@ export default function Login(props) {
             >
             <MenuItem value="hospital">Hospital Admin</MenuItem>
               <MenuItem value="agency">Insurance Agency Admin</MenuItem>
-              <MenuItem value="employee">Employee</MenuItem>
               <MenuItem value="org">Employer</MenuItem>
             </TextField>
             <Button variant="contained" color="primary" type="submit">
-              Log In
+              Register
             </Button>
           </form>
-          <Link className={classes.registerLink} onClick={handleOpenRegisterDialog}>
-            Don't have an account? Register
+          <Link className={classes.registerLink}>
+           Already have an account? Sign in
           </Link>
         </CardContent>
       </Card>
