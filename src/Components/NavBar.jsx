@@ -57,6 +57,11 @@ export default function NavBar() {
     setOpenDialog2(true)
     
   };
+  const updateregPopUp = (data) =>{
+    setOpenDialog2(data);
+    setOpenDialog(true)
+    
+  };
   const handleLoginTypeChange = (event) => {
     setLoginType(event.target.value);
   };
@@ -67,8 +72,11 @@ export default function NavBar() {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            My App
+            Ford Health Checkup
           </Typography>
+          <Button className={classes.navButton} color="inherit">
+            Want to know more?
+          </Button>
           <Button className={classes.navButton} color="inherit" onClick={handleOpenDialog}>
             Login
           </Button>
@@ -78,7 +86,7 @@ export default function NavBar() {
         <Login loginPopUp={updateloginPopUp}></Login>
       </Dialog>
       <Dialog open={openDialog2} onClose={handleCloseDialog}>
-        <Register></Register>
+        <Register regPopUp={updateregPopUp}></Register>
       </Dialog>
     </div>
   );

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   
   },
   card: {
-    minWidth: 500,
+    minWidth: 400,
     maxWidth: 700,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[4],
@@ -43,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Register(props) {
   const classes = useStyles();
 
+  const handleOpenSignUP = () => {
+    // setRegisterDialog(true);
+    props.regPopUp(false)
+  };
 
 
   return (
@@ -71,7 +75,7 @@ export default function Register(props) {
               Register
             </Button>
           </form>
-          <Link className={classes.registerLink}>
+          <Link className={classes.registerLink} onClick={handleOpenSignUP}>
            Already have an account? Sign in
           </Link>
         </CardContent>

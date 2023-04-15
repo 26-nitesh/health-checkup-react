@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   
   },
   card: {
-    minWidth: 500,
+    minWidth: 400,
     maxWidth: 700,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[4],
@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login(props) {
   const classes = useStyles();
-  const [openDialogRegister, setRegisterDialog] = useState(false);
 
 
   const handleOpenRegisterDialog = () => {
